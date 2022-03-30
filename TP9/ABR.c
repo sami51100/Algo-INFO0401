@@ -7,7 +7,7 @@ void ABR_creer(ABR *px)
     *px = NULL;
 }
 
-int ABR_vide(ABR x)
+int ABR_vide(ABR x) // verifie si l'arbre est vide
 {
     return (x == NULL);
 }
