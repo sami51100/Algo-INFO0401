@@ -63,10 +63,17 @@ void defiler(FileTabC *f)
 
     Cellule *tmp = malloc(sizeof(*tmp));
 
-    tmp = f->tete->succ;
-    free(f->tete);
-
-    f->tete = tmp;
+    if (f->tete == f->queue)
+    {
+        f->tete = NULL;
+        f->queue = NULL;
+    }
+    else
+    {
+        tmp = f->tete->succ;
+        free(f->tete);
+        f->tete = tmp;
+    }
 }
 
 Element tete(FileTabC f)
