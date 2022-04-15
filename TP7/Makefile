@@ -1,8 +1,9 @@
-#commentaire
+#by Sami DRIOUCHE
+
 
 CC = gcc
 EXEC = prog 
-SRC= $(wildcard *.c)
+SRC= $(wildcard *.c) $(wildcard */*.c)
 OBJ = $(SRC:.c=.o)
 
 all : $(EXEC)
@@ -13,3 +14,5 @@ $(EXEC): $(OBJ)
 %.o : %.c 
 	$(CC) -o $@ -c $<
 
+clean :
+	rm -f $(EXEC) $(OBJ)

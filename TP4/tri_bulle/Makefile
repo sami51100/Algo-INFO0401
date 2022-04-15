@@ -1,4 +1,5 @@
-#commentaire
+#by Sami DRIOUCHE
+
 
 CC = gcc
 EXEC = prog 
@@ -13,3 +14,5 @@ $(EXEC): $(OBJ)
 %.o : %.c 
 	$(CC) -o $@ -c $<
 
+clean :
+	rm -f $(EXEC) $(OBJ)

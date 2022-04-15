@@ -184,3 +184,25 @@ void ABR_supprimer(ABR *px, Noeud *p)
         ABR_supprimer(px, q);
     }
 }
+
+// creer la methode de recherche infixe
+void ABR_afficher(ABR x)
+{
+    if (x != NULL)
+    {
+        ABR_afficher(x->filsGauche);
+        printf("%d ", x->cle);
+        ABR_afficher(x->filsDroit);
+    }
+}
+
+// creer la methode de recherche prefixe
+void ABR_afficher_prefixe(ABR x)
+{
+    if (x != NULL)
+    {
+        printf("%d ", x->cle);
+        ABR_afficher_prefixe(x->filsGauche);
+        ABR_afficher_prefixe(x->filsDroit);
+    }
+}

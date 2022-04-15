@@ -10,7 +10,7 @@ typedef struct Noeud
     struct Noeud *filsDroit;
 } Noeud;
 
-typedef Noeud *ABR;
+typedef Noeud *ABR; // typedef ABR  = Noeud
 
 // Prototype
 /*********************************/
